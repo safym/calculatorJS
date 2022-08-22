@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <div class="calculatorWrapper">
+        <div class="displayWrapper">
+          <h1 id="displayOutput"></h1>
+        </div>
+        <div class="buttonsWrapper">
+          <button class="buttonNumber" value="1" onclick="pressBtn(this.value)">1</button>
+          <button class="buttonNumber" value="2" onclick="pressBtn(this.value)">2</button>
+          <button class="buttonNumber" value="3" onclick="pressBtn(this.value)">3</button>
+          <br>
+          <button class="buttonNumber" value="4" onclick="pressBtn(this.value)">4</button>
+          <button class="buttonNumber" value="5" onclick="pressBtn(this.value)">5</button>
+          <button class="buttonNumber" value="6" onclick="pressBtn(this.value)">6</button>
+          <br>
+          <button class="buttonNumber" value="7" onclick="pressBtn(this.value)">7</button>
+          <button class="buttonNumber" value="8" onclick="pressBtn(this.value)">8</button>
+          <button class="buttonNumber" value="9" onclick="pressBtn(this.value)">9</button>
+          <br>
+          <button class="buttonNumber" value="0" onclick="pressBtn(this.value)">0</button>
+          <button id="clean" onclick="clearPress()">C</button>
+          <button id="equal" onclick="equalPress()">=</button>
+        </div>
+        <div class="actionsWrapper">
+          <button class="buttonAction" id="btnDelete" onclick="deleteLastCharacter()">
+            <img src="./icons/backspace.svg" />
+          </button>
+          <button class="buttonAction" id="add" value="+" onclick="pressBtn(this.value)">+</button>
+          <button class="buttonAction" id="subtract" value="-" onclick="pressBtn(this.value)">-</button>
+          <button class="buttonAction" id="divide" value="/" onclick="pressBtn(this.value)">&divide;</button>
+          <button class="buttonAction" id="multiply" value="*" onclick="pressBtn(this.value)">&times;</button>
+        </div>  
+      </div>
+    </div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
