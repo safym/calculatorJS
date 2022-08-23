@@ -1,11 +1,9 @@
-var displayElement = document.getElementById("displayOutput");
+var displayElement = document.getElementById('displayInput');
+var labelElement = document.getElementById('labelDisplayInput');
 
 var mathExpression = '';
 
 function pressBtn(value) {
-  // console.log(typeof mathExpression, mathExpression)
-  // console.log(typeof value, value)
-
   mathExpression = mathExpression + value;
   updateDisplay(mathExpression);
 }
@@ -15,21 +13,43 @@ function deleteLastCharacter() {
   if (stringExpression.length != 0) {
     mathExpression = stringExpression.substring(0, stringExpression.length - 1);
     updateDisplay(mathExpression);
+    labelElement.innerText = '\u0000'
   }
 }
 
 function clearPress() {
   mathExpression = '';
+  labelElement.innerText = '\u0000'
   updateDisplay(mathExpression);
 }
 
 function equalPress() {
-  mathExpression = (eval(mathExpression));
+  mathExpression = (displayElement.value);
 
-  // console.log("equal: ", typeof mathExpression, mathExpression)
+  var result;
+  var syntaxError = false;
+  try {
+    result = (eval(mathExpression));
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      syntaxError = true;
+    }
+  }
+
+  if (isFinite(result)) {
+    mathExpression = (eval(displayElement.value));
+    labelElement.innerText = '\u0000'
+  } else {
+    if(syntaxError) {
+      labelElement.innerText = 'Ошибка!'
+    } else {
+      labelElement.innerText = 'На ноль делить нельзя!'
+    }
+  }
+  
   updateDisplay(mathExpression);
 }
 
 function updateDisplay(result) {
-  displayElement.innerText = result;
+  displayElement.value = result;
 }
