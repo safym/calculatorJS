@@ -1,7 +1,14 @@
+:root {
+  --main-text-color: rgb(54, 54, 54);
+  --light-gray: rgb(236, 236, 236);
+  --primary-color-orange: rgb(255, 191, 113);
+  --error-color: rgb(255, 94, 0);
+}
+
 * {
   box-sizing: border-box;
   font-family: monospace;
-  color: rgb(54, 54, 54);
+  color: var(--main-text-color);
 }
 
 .pageWrapper {
@@ -28,11 +35,30 @@
   grid-area: 1 / 1 / 2 / 2; 
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 
-  padding-left: 35px;
+  padding-left: 25px;
+}
+
+#displayInput {
+  width: 300px;
+  padding-left: 15px;
+  margin-bottom: 8px;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+
+#labelDisplayInput {
+  color: var(--error-color);
+}
+
+#btnDelete {
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
 .buttonsWrapper {
@@ -48,11 +74,9 @@
 
 .buttonNumber,
 .buttonAction,
-#displayOutput,
+#displayInput,
 #clean {
   font-size: 40px;
-  box-sizing: border-box;
-  padding: 0;
 }
 
 .buttonAction,
@@ -84,23 +108,18 @@
 }
 
 #clean {
-  color: rgb(255, 154, 45);
-}
-
-#btnDelete {
-  display: flex;
-  justify-content: center;
-  background-color: white;
+  color:  var(--primary-color-orange);
+  padding: 0;
 }
 
 #equal {
-  background-color: rgb(255, 191, 113);
+  background-color: var(--primary-color-orange);
 }
 
 /*elements hover */
 
 .buttonNumber:hover {
-  background-color: rgb(236, 236, 236);
+  background-color: var(--light-gray);
 }
 
 .buttonAction:hover {
