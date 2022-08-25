@@ -3,6 +3,13 @@ var labelElement = document.getElementById('labelDisplayInput');
 
 var mathExpression = '';
 
+displayElement.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("equal").click();
+  }
+});
+
 function pressBtn(value) {
   mathExpression = mathExpression + value;
   updateDisplay(mathExpression);

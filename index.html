@@ -11,7 +11,6 @@
         <div class="displayWrapper">
           <input name="displayInput" id="displayInput" type="text" placeholder="">
           <label for="displayInput" id="labelDisplayInput">&nbsp;</label>
-          <!-- <h1 id="displayOutput"></h1> -->
         </div>
         <div class="buttonsWrapper">
           <button class="buttonNumber" value="1" onclick="pressBtn(this.value)">1</button>
@@ -26,9 +25,10 @@
           <button class="buttonNumber" value="8" onclick="pressBtn(this.value)">8</button>
           <button class="buttonNumber" value="9" onclick="pressBtn(this.value)">9</button>
           <br>
+          <button class="buttonNumber" id="point" value="." onclick="pressBtn(this.value)">.</button>
           <button class="buttonNumber" value="0" onclick="pressBtn(this.value)">0</button>
           <button id="clean" onclick="clearPress()">C</button>
-          <button id="equal" onclick="equalPress()">=</button>
+          <br>
         </div>
         <div class="actionsWrapper">
           <button class="buttonAction" id="btnDelete" onclick="deleteLastCharacter()">
@@ -39,9 +39,11 @@
           <button class="buttonAction" id="divide" value="/" onclick="pressBtn(this.value)">&divide;</button>
           <button class="buttonAction" id="multiply" value="*" onclick="pressBtn(this.value)">&times;</button>
         </div>  
+        <div class="equalWrapper">
+          <button id="equal" onclick="equalPress()">=</button>
+        </div>
       </div>
     </div>
-    
     <script src="./script.js"></script>
   </body>
 </html>
