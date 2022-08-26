@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  transition: 0.15s;
+}
+
+.pageWrapper {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#btnTheme {
+  font-size: 25px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50px;
+}
+
+.calculatorWrapper {
+  display: grid;
+  grid-template-columns: 350px 100px;
+  grid-template-rows: 100px 400px 100px; 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  padding: 10px;
+
+  border-radius: 50px;
+}
+
+.displayWrapper {
+  grid-area: 1 / 1 / 2 / 2; 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#displayInput {
+  width: 300px;
+  padding-left: 15px;
+
+  border-radius: 5px;
+}
+
+#btnDelete {
+  display: flex;
+  justify-content: center;
+}
+
+#labelDisplayInput {
+  margin-top: 5px;
+}
+
+.buttonsWrapper {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.actionsWrapper {
+  grid-area: 1 / 2 / 3 / 3;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.equalWrapper {
+  grid-area: 3 / 1 / 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonNumber,
+.buttonAction,
+#displayInput,
+#clean {
+  font-size: 40px;
+}
+
+.buttonAction,
+#equal {
+  font-size: 50px;
+}
+
+.buttonNumber,
+.buttonAction,
+#clean,
+#equal,
+#btnDelete  {
+  margin: 10px;
+  height: 80px;
+
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+}
+
+.buttonNumber,
+.buttonAction,
+#clean,
+#btnDelete  {
+  width: 80px;
+}
+
+#clean {
+  padding: 0;
+}
+
+#equal {
+  width: 100%;
+}
+
+

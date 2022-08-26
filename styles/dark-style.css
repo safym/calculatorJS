@@ -1,0 +1,89 @@
+:root {
+  --background-color: rgb(46, 46, 52);
+  --main-text-color: rgb(255, 255, 255);
+  --error-color: rgb(113, 29, 187);
+
+
+  --gray-color: rgb(59, 59, 66);
+  --first-color: rgb(60, 47, 81);
+  --second-color: rgb(81, 63, 108);
+  --third-color: rgb(66, 50, 92);
+  --fourth-color: rgb(75, 56, 106);
+
+  --gray-color-active: rgb(68, 68, 77);
+  --first-color-active: rgb(64, 50, 86);
+  --second-color-active: rgb(92, 72, 123);
+  --fourth-color-active: rgb(86, 64, 121);
+}
+
+* {
+  color: var(--main-text-color);
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+.calculatorWrapper,
+#btnTheme {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px 0px;
+}
+
+#displayInput {
+  border: 1px solid var(--gray-color);
+}
+
+#labelDisplayInput {
+  color: var(--error-color);
+}
+
+#btnDelete,
+.buttonNumber,
+.buttonAction,
+#clean,
+#displayInput,
+#btnTheme  {
+  background-color: var(--background-color);
+}
+
+.buttonAction {
+  background-color: var(--third-color);
+}
+
+#clean {
+  color:  var(--second-color);
+}
+
+#equal {
+  background-color: var(--third-color);
+}
+
+/*elements hover */
+
+.buttonNumber:hover,
+#clean:hover {
+  background-color: var(--gray-color);
+}
+
+.buttonAction:hover {
+  background-color: var(--second-color);
+}
+
+#equal:hover {
+  background-color: var(--first-color);
+}
+
+/*elements active */
+
+.buttonNumber:active,
+#clean:active  {
+  background-color: var(--gray-color-active);
+}
+
+.buttonAction:active {
+  background-color: var(--second-color-active);
+}
+
+#equal:active {
+  background-color: var(--first-color-active);
+}
