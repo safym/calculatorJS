@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link  id="linkTheme"rel="stylesheet" href="./styles/light-style.css">
   </head>
   <body>
     <div class="pageWrapper">
+      <button id="btnTheme">🌚</button>
       <div class="calculatorWrapper">
         <div class="displayWrapper">
           <input name="displayInput" id="displayInput" type="text" placeholder="">
@@ -31,7 +33,7 @@
           <br>
         </div>
         <div class="actionsWrapper">
-          <button class="buttonAction" id="btnDelete" onclick="deleteLastCharacter()">
+          <button id="btnDelete" onclick="deleteLastCharacter()">
             <img src="./icons/backspace.svg" />
           </button>
           <button class="buttonAction" id="add" value="+" onclick="pressBtn(this.value)">+</button>

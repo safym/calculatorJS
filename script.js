@@ -1,7 +1,6 @@
+var mathExpression = '';
 var displayElement = document.getElementById('displayInput');
 var labelElement = document.getElementById('labelDisplayInput');
-
-var mathExpression = '';
 
 displayElement.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -10,10 +9,31 @@ displayElement.addEventListener("keypress", function(event) {
   }
 });
 
+var btnTheme = document.getElementById("btnTheme");
+var linkTheme = document.getElementById("linkTheme")
+
+btnTheme.addEventListener("click", function() {changeTheme();})
+
+function changeTheme() {
+  let lightTheme = "./styles/light-style.css"
+  let darkTheme = "./styles/dark-style.css"
+
+  currentTheme = linkTheme.getAttribute("href");
+
+  if (currentTheme == lightTheme) {
+    linkTheme.href = darkTheme;
+    btnTheme.innerText = "🌞";
+  } else {
+    linkTheme.href = lightTheme;
+    btnTheme.innerText = "🌚";
+  }
+}
+
 function pressBtn(value) {
   mathExpression = mathExpression + value;
   updateDisplay(mathExpression);
 }
+
 function deleteLastCharacter() {
   let stringExpression = String(mathExpression);
 
