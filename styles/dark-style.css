@@ -65,12 +65,9 @@ html {
   background-color: var(--gray-color);
 }
 
-.buttonAction:hover {
-  background-color: var(--second-color);
-}
-
+.buttonAction:hover,
 #equal:hover {
-  background-color: var(--first-color);
+  background-color: var(--second-color);
 }
 
 /*elements active */
@@ -80,10 +77,7 @@ html {
   background-color: var(--gray-color-active);
 }
 
-.buttonAction:active {
-  background-color: var(--second-color-active);
-}
-
-#equal:active {
+#equal:active,
+.buttonAction:active  {
   background-color: var(--first-color-active);
 }
