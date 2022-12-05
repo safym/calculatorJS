@@ -1,6 +1,8 @@
-var mathExpression = '';
-var displayElement = document.getElementById('displayInput');
-var labelElement = document.getElementById('labelDisplayInput');
+"use strict";
+
+let mathExpression = '';
+let displayElement = document.getElementById('displayInput');
+let labelElement = document.getElementById('labelDisplayInput');
 
 displayElement.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -9,8 +11,8 @@ displayElement.addEventListener("keypress", function(event) {
   }
 });
 
-var btnTheme = document.getElementById("btnTheme");
-var linkTheme = document.getElementById("linkTheme")
+let btnTheme = document.getElementById("btnTheme");
+let linkTheme = document.getElementById("linkTheme")
 
 btnTheme.addEventListener("click", function() {changeTheme();})
 
@@ -18,7 +20,7 @@ function changeTheme() {
   let lightTheme = "./styles/light-style.css"
   let darkTheme = "./styles/dark-style.css"
 
-  currentTheme = linkTheme.getAttribute("href");
+  let currentTheme = linkTheme.getAttribute("href");
 
   if (currentTheme == lightTheme) {
     linkTheme.href = darkTheme;
@@ -53,8 +55,8 @@ function clearPress() {
 function equalPress() {
   mathExpression = (displayElement.value);
 
-  var result;
-  var syntaxError = false;
+  let result;
+  let syntaxError = false;
   try {
     result = (eval(mathExpression));
   } catch (e) {
